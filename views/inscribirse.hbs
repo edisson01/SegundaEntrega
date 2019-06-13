@@ -1,0 +1,46 @@
+{{>header}}
+
+    <h3>Formulario para inscribirse en un curso</h3>
+    <h6>Utilice este formulario para inscribirse en un curso</h6><br>
+
+    <form action="/inscribirCurso" method="post">
+        <div class="container">
+                <div class="form-group row">
+                    <label for="documento" class="col-sm-2 col-form-label">Documento de identidad</label>
+                    <div class="col-sm-2">
+                        <input type="number" class="form-control" name="documento" placeholder="documento" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="email" class="col-sm-2 col-form-label">Correo Electronico</label>
+                    <div class="col-sm-2">
+                    <input type="email" class="form-control col-sm-1" name="email" placeholder="Correo electronico" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
+                    <div class="col-sm-2">
+                    <input type="text" class="form-control col-sm-1" name="nombre" placeholder="Nombre" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="telefono" class="col-sm-2 col-form-label">Telefono</label>
+                    <div class="col-sm-2">
+                        <input type="number" class="form-control" name="telefono" placeholder="telefono" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="cursos" class="col-sm-2 col-form-label">Cursos disponibles</label>
+                    <div class="col-sm-2">
+                    {{{selectLstCursos}}}                     
+                    </div>
+                </div>                
+            <div class="form-group row">
+                <div class="col-sm-1">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+{{>footer}}

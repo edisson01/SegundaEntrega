@@ -1,0 +1,19 @@
+{{>header}}
+
+    {{{mostrarListaCursos}}}
+    <br>	
+	<form action="/cambiarEstado" method="post">	
+	<div class="container">
+		{{{selectLstCursos}}}
+		<br>
+		<div class="form-group row">
+			<div class="col-sm-1">
+			<button type="submit" class="btn btn-primary">Cambiar Estado</button>
+			</div>
+		</div>
+	</div>
+	</form>	
+	<br>
+    {{{mostrarListaCursosDisp}}}
+
+{{>footer}}
